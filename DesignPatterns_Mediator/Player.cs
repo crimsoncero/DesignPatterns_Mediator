@@ -4,11 +4,11 @@ namespace DesignPatterns_Mediator
 {
     public class Player : AbstractChatter
     {
-        public Player(string name) : base(name) { }
+        public Player(string name, Chatroom chatroom) : base(name, chatroom) { }
 
-        public void Report(AbstractChatter reported, string reason)
+        public void Report(string reported, string reason)
         {
-
+            Chatroom.Report(Name, reported, reason);
         }
 
     }
